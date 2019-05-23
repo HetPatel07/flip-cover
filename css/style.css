@@ -1,0 +1,41 @@
+body{
+    font-family: sans-serif;
+}
+.cover {
+    border: 2px solid #333;
+    height: 400px;
+    position: relative;
+    transition: 1s;
+    z-index: 111;
+    box-shadow: inset 300px 0px 50px 0px #888;
+}
+
+.cover:hover {
+    transition: 1.5s;
+    transform: rotate(-10deg);
+    box-shadow: inset 20px 0px 50px 0px #888;
+}
+
+.imgBox{
+    position: relative;
+}
+.imgBox img{
+    height: 400px;
+    width: 100%;
+    transition: 1s;
+    transform-origin: left;
+}
+
+.content{
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.cover:hover .imgBox img {
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform: rotateY(150deg) perspective(2000px);
+    transform-origin: left;
+}
